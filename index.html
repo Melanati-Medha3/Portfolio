@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melanati Medha Sree - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <h1>Melanati Medha Sree</h1>
+            <ul>
+                <li><button class="collapsible-header" data-target="about">About</button></li>
+                <li><button class="collapsible-header" data-target="education">Education</button></li>
+                <li><button class="collapsible-header" data-target="projects">Projects</button></li>
+                <li><button class="collapsible-header" data-target="resume">Resume</button></li>
+                <li><button class="collapsible-header" data-target="contact">Contact</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- About Section -->
+        <section id="about" class="collapsible-content">
+            <h2 id="about-heading">About Me</h2>
+            <p>I am Melanati Medha Sree, a 4th-year Computer Science and Engineering student with a strong foundation in programming principles and web technologies.</p>
+            <p>I have experience and skills in the following areas:</p>
+            <ul>
+                <li>Programming Languages: C, Java,DSA,Data Base and basics of JavaScript</li>   
+                <li>Data Structures and Algorithms (DSA): Proficient in key concepts and problem-solving techniques</li>
+                <li>Web Technologies: HTML, CSS</li>
+                <li>Tools: MS Office (Excel, PowerPoint, Word)</li>
+            </ul>
+            <p>I am highly motivated with excellent communication skills and a practical approach to teamwork. I am eager to take on additional responsibilities and contribute effectively to team goals throughout my career.</p>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="collapsible-content">
+            <h2 id="education-heading">Education</h2>
+            <ul>
+                <li>Schooling: Montessori High School with 9.7 GPA</li>
+                <li>Intermediate: Govt Junior College with 85.5%</li>
+                <li>B.Tech: Currently pursuing at Ravindra College of Engineering for Women with 77.86%</li>
+            </ul>
+            <div>
+                <h4>Certifications</h4>
+                <ul>
+                    <li>Java Full Stack:Completed a Java Full Stack from Wipro TalentNext.</li>
+                    <li>Data Structures & Algorithms: Completed a specialized course in data structures and algorithms from SmartInterviews.</li>
+                    <li>Soft Skills:completed Soft skills, IBM cloud computing certificates from Edx.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Courses</h4>
+                <ul>
+                    <li>Artificial Intelligence with Python: A comprehensive course on implementing AI algorithms and techniques using Python.</li>
+                    <li>Data Structures and Algorithms: An in-depth course covering essential concepts and techniques in data structures and algorithms.</li>
+                    <li>Soft Skills: Effective communication, teamwork, problem-solving, and time management.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="collapsible-content">
+            <h2>Projects</h2>
+            <div>
+                <h3>Banking System</h3>
+                <p>Developed a comprehensive banking system to manage customer accounts, transactions, and other banking operations. The system supports features such as account creation, deposit, withdrawal, and transaction history management.</p>
+                <p>Technologies Used: Java, MySQL, HTML, CSS</p>
+                <p>Role: Lead Developer - Designed and implemented core functionalities, including account management and transaction processing.</p>
+                <p>Key Achievements: Successfully implemented secure transaction handling and user authentication, enhancing overall system reliability.</p>
+            </div>
+            <div>
+                <h3>To-Do List Web Application</h3>
+                <p>A simple web-based To-Do List application built using Java, allowing users to create, edit, and delete tasks.</p>
+                <p>Technologies Used: Programming Language: Java
+                Framework: Spring Boot
+                   Database: MySQL
+                   Frontend: HTML, CSS, JavaScript, Bootstrap
+                   Server: Apache Tomcat
+                   API: RESTful API
+                   Authentication: Spring Security
+                   Testing: JUnit, Mockito
+                </p>
+                <p>Development Tools:
+                    1. IDE: Eclipse, IntelliJ IDEA
+                    2. Version Control: Git
+                    3. Project Management: Agile, Jira
+                </p>
+               
+            </div>
+            <div>
+                <h3>Resume Builder</h3>
+                <p>This project is a web application designed to help users create professional resumes. It allows users to input personal information, skills, experiences, and download their resumes in various formats.</p>
+                <p>Technologies Used: JavaScript, HTML, CSS</p>
+                <p>Role: Full Stack Developer - Implemented both the frontend and backend of the application, including the resume template generation and export functionality.</p>
+                <p>Key Achievements: Developed a user-friendly interface and export options, facilitating easy resume creation and customization.</p>
+            </div>
+            
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="collapsible-content">
+            <h2>Resume</h2>
+            <p>Upload and View Resume:</p>
+            <input type="file" id="resume-file" accept=".pdf, .doc, .docx">
+            <button onclick="viewResume()">View Resume</button>
+            <div id="resume-preview"></div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="collapsible-content">
+            <h2>Contact</h2>
+            <p>You can reach me via the following methods:</p>
+            <ul>
+                <li>Email: <a href="mailto:medhasree45@gmail.com">medhasree45@gmail.com</a></li>
+                <li>Phone: <a href="tel:+918317632985">+91 83176 32985</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/medhasree" target="_blank">linkedin.com/in/medhasree</a></li>
+                <li>GitHub: <a href="https://github.com/Melanti-Medha3" target="_blank">github.com/Melanati-Medha3</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Melaanti Medha Sree. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.collapsible-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const content = document.getElementById(targetId);
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    document.querySelectorAll('.collapsible-content').forEach(sec => sec.style.display = 'none');
+                    content.style.display = 'block';
+                }
+            });
+        });
+
+        function viewResume() {
+            const fileInput = document.getElementById('resume-file');
+            const file = fileInput.files[0];
+
+            if (file) {
+                const fileUrl = URL.createObjectURL(file);
+                const previewDiv = document.getElementById('resume-preview');
+                previewDiv.innerHTML = `
+                    <iframe src="${fileUrl}" frameborder="0"></iframe>
+                    <p>Viewing: ${file.name}</p>
+                `;
+            } else {
+                alert('Please upload a resume file first.');
+            }
+        }
+    </script>
+</body>
+</html>
